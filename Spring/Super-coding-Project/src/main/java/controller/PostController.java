@@ -25,7 +25,7 @@ public class PostController {
             AuthInfo authInfo,
             @RequestBody PostRequest postRequest
     ) {
-        Post post = postService.writePost(postRequest.getTitle(), postRequest.getBody(), authInfo.getMemberId();
+        Post post = postService.writePost(postRequest.getTitle(), postRequest.getBody(), authInfo.getMemberId());
                 return ResponseEntity.ok(PostResponse.from(post));
 
     }

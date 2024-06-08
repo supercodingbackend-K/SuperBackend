@@ -1,14 +1,16 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.7.14'
-    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'org.springframework.boot' version '2.7.0'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
 
 group = 'com.github'
 version = '0.0.1-SNAPSHOT'
 
 java {
-    sourceCompatibility = '11'
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
 }
 
 configurations {
@@ -47,6 +49,8 @@ dependencies {
     implementation 'io.springfox:springfox-swagger2:2.9.2'
 
     implementation 'com.auth0:java-jwt:3.18.2'
+
+
     // Other dependencies
 }
 

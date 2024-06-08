@@ -17,7 +17,7 @@ public class PostRequest {
     }
 
     public String getBody() {
-        return body;
+        return getBody();
     }
 
     public void setBody(String body) {
